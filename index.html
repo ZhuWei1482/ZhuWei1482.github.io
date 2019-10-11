@@ -105,73 +105,6 @@
 </article>
 
   
-    <article id="post-v2ray搭建" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/09/v2ray搭建/">v2ray搭建</a>
-    </h1>
-  
-
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2019/09/09/v2ray搭建/" class="article-date">
-  <time datetime="2019-09-09T08:46:12.000Z" itemprop="datePublished">2019-09-09</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/技术/">技术</a>►<a class="article-category-link" href="/categories/技术/v2ray/">v2ray</a>
-  </div>
-
-    
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li></ul>
-
-  </div>
-  
-
-  <div class="article-inner">
-    
-    <div class="article-content article-content-cloud" itemprop="articleBody">
-      
-        <p>本文参考<a href="https://guide.v2fly.org/prep/install.htm" target="_blank" rel="noopener">新 V2Ray 白话文指南</a></p>
-<p>###1.时间校准<br>查看时间:</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ date -R</span><br></pre></td></tr></table></figure></div>
-
-<p>修改时间：</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo date --set=&quot;2017-01-22 16:16:23&quot;</span><br></pre></td></tr></table></figure></div>
-
-<p>如果时间跑不准安装NTP校时包</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install ntpdate ntp #安装ntp</span><br></pre></td></tr></table></figure></div>
-
-<p>修改/etc/ntp.conf   全球ntp服务器地址：<a href="http://www.pool.ntp.org/" target="_blank" rel="noopener">http://www.pool.ntp.org/</a></p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">server cn.pool.ntp.org    //这中国的ntp服务器</span><br><span class="line">server time-a.nist.gov</span><br><span class="line">server time.windows.com</span><br><span class="line">server time.nist.gov</span><br></pre></td></tr></table></figure></div>
-
-<p>###2.脚本安装<br>下载脚本：</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ wget https://install.direct/go.sh</span><br></pre></td></tr></table></figure></div>
-
-<p>然后执行脚本安装 V2Ray:</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo bash go.sh</span><br></pre></td></tr></table></figure></div>
-
-<p>安装完之后，使用以下命令启动 V2Ray:</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo systemctl start v2ray</span><br></pre></td></tr></table></figure></div>
-
-<p>###3.升级更新<br>在 VPS，重新执行一遍安装脚本就可以更新了，在更新过程中会自动重启 V2Ray，配置文件保持不变</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo bash go.sh</span><br></pre></td></tr></table></figure></div>
-
-<p>###4.加速脚本</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -N --no-check-certificate &quot;https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh&quot; &amp;&amp; chmod +x tcp.sh &amp;&amp; ./tcp.sh</span><br></pre></td></tr></table></figure></div>
-      
-    </div>
-    
-  </div>
-  
-  
-</article>
-
-  
     <article id="post-docker笔记" class="article global-container article-type-post" itemscope itemprop="blogPost">
   
     <header class="article-header">
@@ -232,72 +165,6 @@
 
 <p>5.容器终止命令</p>
 <div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker container kill [containID]</span><br></pre></td></tr></table></figure></div>
-      
-    </div>
-    
-  </div>
-  
-  
-</article>
-
-  
-    <article id="post-SSR搭建流程" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/19/SSR搭建流程/">SSR搭建流程</a>
-    </h1>
-  
-
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2019/08/19/SSR搭建流程/" class="article-date">
-  <time datetime="2019-08-19T02:48:28.000Z" itemprop="datePublished">2019-08-19</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/技术/">技术</a>
-  </div>
-
-    
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SSR/">SSR</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/serverStatus/">serverStatus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/魔改BBR/">魔改BBR</a></li></ul>
-
-  </div>
-  
-
-  <div class="article-inner">
-    
-    <div class="article-content article-content-cloud" itemprop="articleBody">
-      
-        <h3 id="SSR安装"><a href="#SSR安装" class="headerlink" title="SSR安装"></a>SSR安装</h3><h4 id="SSR一键安装脚本"><a href="#SSR一键安装脚本" class="headerlink" title="SSR一键安装脚本"></a>SSR一键安装<a href="../public/脚本/SSR.html">脚本</a></h4><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh</span><br><span class="line">$ chmod +x shadowsocks-all.sh</span><br><span class="line">$ ./shadowsocks-all.sh 2&gt;&amp;1 | tee shadowsocks-all.log</span><br></pre></td></tr></table></figure></div>
-
-<h4 id="SSR命令"><a href="#SSR命令" class="headerlink" title="SSR命令"></a>SSR命令</h4><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">##启动SSR：</span><br><span class="line">$ /etc/init.d/shadowsocks-r start</span><br><span class="line">##退出SSR：</span><br><span class="line">$ /etc/init.d/shadowsocks-r stop</span><br><span class="line">##重启SSR：</span><br><span class="line">$ /etc/init.d/shadowsocks-r restart</span><br><span class="line">##SSR状态：</span><br><span class="line">$ /etc/init.d/shadowsocks-r status</span><br><span class="line">##卸载SSR：</span><br><span class="line">$ ./shadowsocks-all.sh uninstall</span><br></pre></td></tr></table></figure></div>
-
-<p>另外如果需要更改SSR的相关配置参数，配置文件位置在：/etc/shadowsocks-r/config.json<br>参考网站：<a href="https://ssr.tools/31" target="_blank" rel="noopener">https://ssr.tools/31</a></p>
-<h3 id="南琴浪版暴力魔改BBR安装脚本"><a href="#南琴浪版暴力魔改BBR安装脚本" class="headerlink" title="南琴浪版暴力魔改BBR安装脚本"></a>南琴浪版暴力魔改BBR安装<a href="../public/脚本/BBR.html">脚本</a></h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ wget --no-check-certificate https://raw.githubusercontent.com/tcp-nanqinlang/general/master/General/CentOS/bash/tcp_nanqinlang-1.3.2.sh</span><br><span class="line">$ bash tcp_nanqinlang-1.3.2.sh</span><br></pre></td></tr></table></figure></div>
-
-<h4 id="管理BBR界面"><a href="#管理BBR界面" class="headerlink" title="管理BBR界面"></a>管理BBR界面</h4><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ bash tcp_nanqinlang-1.3.2.sh</span><br></pre></td></tr></table></figure></div>
-
-<h3 id="SSTAP-SSR-udpspeeder游戏加速方案"><a href="#SSTAP-SSR-udpspeeder游戏加速方案" class="headerlink" title="SSTAP+SSR+udpspeeder游戏加速方案"></a>SSTAP+SSR+udpspeeder游戏加速方案</h3><h4 id="方案介绍"><a href="#方案介绍" class="headerlink" title="方案介绍"></a>方案介绍</h4><p><a href="https://www.atrandys.com/2018/714.html" target="_blank" rel="noopener">本游戏加速方案</a>是在ss基础上进行配置（同样适用于ssr），使用sstap+ss+udpspeeder的方式，这种方式能让ss的udp流量被udpspeeder承载，降低udp的丢包情况，ss的tcp流量将使用tinyportmapper转发，所以这种形式可以让你的游戏被加速的同时，可以正常使用ss代理上网。</p>
-<h3 id="serverStatus安装"><a href="#serverStatus安装" class="headerlink" title="serverStatus安装"></a>serverStatus安装</h3><h4 id="serverStatus一键脚本"><a href="#serverStatus一键脚本" class="headerlink" title="serverStatus一键脚本"></a>serverStatus一键脚本</h4><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/status.sh &amp;&amp; chmod +x status.sh</span><br></pre></td></tr></table></figure></div>
-
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 显示客户端管理菜单</span><br><span class="line">bash status.sh c</span><br><span class="line"> </span><br><span class="line"># 显示服务端管理菜单</span><br><span class="line">bash status.sh s</span><br></pre></td></tr></table></figure></div>
-
-<h4 id="其他操作"><a href="#其他操作" class="headerlink" title="其他操作"></a>其他操作</h4><h5 id="客户端："><a href="#客户端：" class="headerlink" title="客户端："></a>客户端：</h5><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">启动：/etc/init.d/status-client start</span><br><span class="line"></span><br><span class="line">停止：/etc/init.d/status-client stop</span><br><span class="line"></span><br><span class="line">重启：/etc/init.d/status-client restart</span><br><span class="line"></span><br><span class="line">查看状态：/etc/init.d/status-client status</span><br></pre></td></tr></table></figure></div>
-
-<h5 id="服务端："><a href="#服务端：" class="headerlink" title="服务端："></a>服务端：</h5><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">启动：/etc/init.d/status-server start</span><br><span class="line"></span><br><span class="line">停止：/etc/init.d/status-server stop</span><br><span class="line"></span><br><span class="line">重启：/etc/init.d/status-server restart</span><br><span class="line"></span><br><span class="line">查看状态：/etc/init.d/status-server status</span><br></pre></td></tr></table></figure></div>
-
-<h5 id="Caddy（HTTP服务）："><a href="#Caddy（HTTP服务）：" class="headerlink" title="Caddy（HTTP服务）："></a>Caddy（HTTP服务）：</h5><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">启动：/etc/init.d/caddy start</span><br><span class="line"></span><br><span class="line">停止：/etc/init.d/caddy stop</span><br><span class="line"></span><br><span class="line">重启：/etc/init.d/caddy restart</span><br><span class="line"></span><br><span class="line">查看状态：/etc/init.d/caddy status</span><br><span class="line"></span><br><span class="line">Caddy配置文件：/usr/local/caddy/Caddyfile</span><br><span class="line"></span><br><span class="line">默认脚本只能一开始安装的时候设置配置文件，更多的Caddy使用方法，可以参考这些教程：https://doub.io/search/caddy</span><br></pre></td></tr></table></figure></div>
-
-<p>安装目录：/usr/local/ServerStatus</p>
-<p>网页文件：/usr/local/ServerStatus/web</p>
-<p>配置文件：/usr/local/ServerStatus/server/config.json</p>
-<p>客户端查看日志：tail -f tmp/serverstatus_client.log</p>
-<p>服务端查看日志：tail -f /tmp/serverstatus_server.log</p>
-
       
     </div>
     
@@ -619,7 +486,7 @@
   <div class="widget-box">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/">技术</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/v2ray/">v2ray</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/美文/">美文</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/随记/">随记</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/">技术</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/美文/">美文</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/随记/">随记</a></li></ul>
     </div>
   </div>
 
@@ -629,7 +496,7 @@
   <div class="widget-box">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/SSR/">SSR</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java环境/">java环境</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/serverStatus/">serverStatus</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/光年/">光年</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/欲望/">欲望</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/短句/">短句</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/网站/">网站</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/销售/">销售</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/魔改BBR/">魔改BBR</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java环境/">java环境</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/光年/">光年</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/欲望/">欲望</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/短句/">短句</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/网站/">网站</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/销售/">销售</a></li></ul>
     </div>
   </div>
 
@@ -655,19 +522,19 @@
           </li>
         
           <li>
-            <a href="/2019/09/09/v2ray搭建/">v2ray搭建</a>
-          </li>
-        
-          <li>
             <a href="/2019/08/21/docker笔记/">docker笔记</a>
           </li>
         
           <li>
-            <a href="/2019/08/19/SSR搭建流程/">SSR搭建流程</a>
+            <a href="/2019/08/18/实用网站记录/">实用网站记录</a>
           </li>
         
           <li>
-            <a href="/2019/08/18/实用网站记录/">实用网站记录</a>
+            <a href="/2019/08/16/文字之美/">文字之美</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/15/销售经验随记/">销售经验总结</a>
           </li>
         
       </ul>
