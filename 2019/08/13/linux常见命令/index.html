@@ -18,7 +18,7 @@
 <meta property="og:site_name">
 <meta property="og:description" content="文件命令: cat    显示文本文件内容  echo    生成一个带内容文件 123$ echo abcd &amp;gt; 1#追加内容$ txtecho 1234 &amp;gt;&amp;gt; 1.txt  mkdir    创建目录  rm    删除文件 -f    强制删除文件或目录 -r    同时删除该目录下的所有文件  mv    移动文件或目录  find    在文件系统中查找指定的文件 -n">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-09-13T10:12:26.793Z">
+<meta property="og:updated_time" content="2019-10-11T06:16:01.366Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="linux常见命令">
 <meta name="twitter:description" content="文件命令: cat    显示文本文件内容  echo    生成一个带内容文件 123$ echo abcd &amp;gt; 1#追加内容$ txtecho 1234 &amp;gt;&amp;gt; 1.txt  mkdir    创建目录  rm    删除文件 -f    强制删除文件或目录 -r    同时删除该目录下的所有文件  mv    移动文件或目录  find    在文件系统中查找指定的文件 -n">
@@ -151,9 +151,12 @@
 
 </li>
 </ol>
-<p>##Centos 7 firewall 命令：<br>24.查看已经开放的端口：</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --list-ports</span><br></pre></td></tr></table></figure></div>
+<p>##Centos 7 firewall 命令：</p>
+<ol start="24">
+<li>查看已经开放的端口：<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --list-ports</span><br></pre></td></tr></table></figure></div>
 
+</li>
+</ol>
 <p>开启端口</p>
 <div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --zone=public --add-port=20695/tcp --permanent</span><br></pre></td></tr></table></figure></div>
 

@@ -10,18 +10,18 @@
   
   
   
-  <meta name="description" content="1.修改environment文件 1$ vim ./etc/environment  1234PATH=&amp;quot;/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games&amp;quot;	export JAVA_HOME=/usr/local/java/jdk1.8.0_152">
+  <meta name="description" content="修改environment文件1$ vim ./etc/environment    1234PATH=&amp;quot;/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games&amp;quot;	export JAVA_HOME=/usr/local/java/jdk1.8.0_152">
 <meta name="keywords" content="linux,java环境">
 <meta property="og:type" content="article">
 <meta property="og:title" content="java环境配置">
 <meta property="og:url" content="https://zhuwei1482.github.io/2019/07/30/linux系统java环境变量配置/index.html">
 <meta property="og:site_name">
-<meta property="og:description" content="1.修改environment文件 1$ vim ./etc/environment  1234PATH=&amp;quot;/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games&amp;quot;	export JAVA_HOME=/usr/local/java/jdk1.8.0_152">
+<meta property="og:description" content="修改environment文件1$ vim ./etc/environment    1234PATH=&amp;quot;/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games&amp;quot;	export JAVA_HOME=/usr/local/java/jdk1.8.0_152">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-18T06:44:14.615Z">
+<meta property="og:updated_time" content="2019-10-11T06:20:30.129Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java环境配置">
-<meta name="twitter:description" content="1.修改environment文件 1$ vim ./etc/environment  1234PATH=&amp;quot;/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games&amp;quot;	export JAVA_HOME=/usr/local/java/jdk1.8.0_152">
+<meta name="twitter:description" content="修改environment文件1$ vim ./etc/environment    1234PATH=&amp;quot;/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games&amp;quot;	export JAVA_HOME=/usr/local/java/jdk1.8.0_152">
   
     <link rel="alternate" href="/atom.xml" title type="application/atom+xml">
   
@@ -101,18 +101,26 @@
     
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
-        <p><strong>1.修改environment文件</strong></p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vim ./etc/environment</span><br></pre></td></tr></table></figure></div>
+        <ol>
+<li>修改environment文件<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vim ./etc/environment</span><br></pre></td></tr></table></figure></div>
 
+</li>
+</ol>
 <div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">PATH=&quot;/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games&quot;</span><br><span class="line">	export JAVA_HOME=/usr/local/java/jdk1.8.0_152</span><br><span class="line">	export JRE_HOME=/usr/local/java/jdk1.8.0_152/jre</span><br><span class="line">	export CLASSPATH=$CLASSPATH:$JAVA_HOME/lib:$JAVA_HOME/jre/lib</span><br></pre></td></tr></table></figure></div>
 
-<p><strong>2.修改profile文件</strong></p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vim ./etc/profile</span><br></pre></td></tr></table></figure></div>
+<hr>
+<ol start="2">
+<li>修改profile文件<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vim ./etc/profile</span><br></pre></td></tr></table></figure></div>
 
+</li>
+</ol>
 <div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">if [ &quot;$PS1&quot; ]; then</span><br><span class="line">  if [ &quot;$BASH&quot; ] &amp;&amp; [ &quot;$BASH&quot; != &quot;/bin/sh&quot; ]; then</span><br><span class="line">    # The file bash.bashrc already sets the default PS1.</span><br><span class="line">    # PS1=&apos;\h:\w\$ &apos;</span><br><span class="line">    if [ -f /etc/bash.bashrc ]; then</span><br><span class="line">      . /etc/bash.bashrc</span><br><span class="line">    fi</span><br><span class="line">  else</span><br><span class="line">    if [ &quot;`id -u`&quot; -eq 0 ]; then</span><br><span class="line">      PS1=&apos;# &apos;</span><br><span class="line">    else</span><br><span class="line">      PS1=&apos;$ &apos;</span><br><span class="line">    fi</span><br><span class="line">  	fi</span><br><span class="line">	fi</span><br><span class="line"></span><br><span class="line">	export JAVA_HOME=/usr/local/java/jdk1.8.0_152</span><br><span class="line">	export JRE_HOME=/usr/local/java/jdk1.8.0_152/jre</span><br><span class="line">	export CLASSPATH=$CLASSPATH:$JAVA_HOME/lib:$JAVA_HOME/jre/lib</span><br><span class="line">	export PATH=$JAVA_HOME/bin:$JAVA_HOME/jre/bin:$PATH:$HOME/bin</span><br><span class="line"></span><br><span class="line">	if [ -d /etc/profile.d ]; then</span><br><span class="line">	  for i in /etc/profile.d/*.sh; do</span><br><span class="line"> 	 	  if [ -r $i ]; then</span><br><span class="line">  	    . $i</span><br><span class="line">  	  fi</span><br><span class="line">  	done</span><br><span class="line"> 	 unset i</span><br><span class="line">	fi</span><br></pre></td></tr></table></figure></div>
 
-<p><strong>3.使用户环境变量生效</strong></p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ .source /etc/profile</span><br></pre></td></tr></table></figure></div>
+<hr>
+<ol start="3">
+<li>使用户环境变量生效<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ .source /etc/profile</span><br></pre></td></tr></table></figure></div></li>
+</ol>
+
       
     </div>
     
