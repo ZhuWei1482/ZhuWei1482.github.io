@@ -2,104 +2,388 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  
-
-  
-  <title>java环境配置 | </title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  
-  
-  
-  <meta name="description" content="修改environment文件1$ vim ./etc/environment    1234PATH=&amp;quot;/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games&amp;quot;	export JAVA_HOME=/usr/local/java/jdk1.8.0_152">
-<meta name="keywords" content="linux">
-<meta property="og:type" content="article">
-<meta property="og:title" content="java环境配置">
-<meta property="og:url" content="https://zhuwei1482.github.io/2019/07/30/linux系统java环境变量配置/index.html">
-<meta property="og:site_name">
-<meta property="og:description" content="修改environment文件1$ vim ./etc/environment    1234PATH=&amp;quot;/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games&amp;quot;	export JAVA_HOME=/usr/local/java/jdk1.8.0_152">
+  <title>java环境配置 | MINGXI~blog</title>
+  <meta name="keywords" content=" linux ">
+  <meta name="description" content="java环境配置 | MINGXI~blog">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="个人的技术交流平台，无聊的生活随记，小白的学习笔记。">
+<meta name="keywords" content="技术">
+<meta property="og:type" content="website">
+<meta property="og:title" content="categories">
+<meta property="og:url" content="https://liuxueyang.xyz/categories/index.html">
+<meta property="og:site_name" content="MINGXI~blog">
+<meta property="og:description" content="个人的技术交流平台，无聊的生活随记，小白的学习笔记。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-10-11T12:07:46.993Z">
+<meta property="og:updated_time" content="2019-08-18T05:14:51.325Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="java环境配置">
-<meta name="twitter:description" content="修改environment文件1$ vim ./etc/environment    1234PATH=&amp;quot;/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games&amp;quot;	export JAVA_HOME=/usr/local/java/jdk1.8.0_152">
-  
-    <link rel="alternate" href="/atom.xml" title type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/public/images/">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/css/highlight.css">
-  <script>
-  let antiquityStorage = window.sessionStorage.getItem('antiquitySessionStorage');
-  if (antiquityStorage == '' || antiquityStorage == null) {
-    var antiquityLoader = '<div id="loaderbox"><div class="loader"><div class="load-roll"><div class="load-top"></div><div class="load-right"></div><div class="load-bottom"></div></div></div></div>';
-    document.write(antiquityLoader);
-    document.body.style.overflow = 'hidden'
-  }
-  </script>
+<meta name="twitter:title" content="categories">
+<meta name="twitter:description" content="个人的技术交流平台，无聊的生活随记，小白的学习笔记。">
+
+
+<link rel="icon" href="/img/avatar.jpeg">
+
+<link href="/css/style.css?v=1.0.1" rel="stylesheet">
+
+<link href="/css/hl_theme/rainbow.css?v=1.0.1" rel="stylesheet">
+
+<link href="//cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="/js/jquery.autocomplete.min.js?v=1.0.1"></script>
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+<script src="/js/iconfont.js?v=1.0.1"></script>
+
 </head>
-</html>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="false">
+  <input class="theme_blog_path" value>
+</div>
+
 <body>
-  <div id="fullpage" class="mobile-nav-right">
-    
-      <div id="wrapper" title="图片来自网络">
-    
-    
-      <header id="header">
-  <div id="nav-toggle" class="nav-toggle"></div>
-  <div class="head-box global-width">
-    <nav class="nav-box nav-right">
-      
-        <a class="nav-item" href="/" title
-        
-        >首页</a>
-      
-        <a class="nav-item" href="/archives" title
-        
-        >归档</a>
-      
-    </nav>
-  </div>
-</header>
-      <div id="middlecontent" title class="global-width sidebar-right">
-        <section id="main"><article id="post-linux系统java环境变量配置" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 class="article-title" itemprop="name">
-      java环境配置
-    </h1>
-  
-
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2019/07/30/linux系统java环境变量配置/" class="article-date">
-  <time datetime="2019-07-30T08:46:19.000Z" itemprop="datePublished">2019-07-30</time>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/" class="avatar_target">
+    <img class="avatar" src="https://cdn.jsdelivr.net/gh/ZhuWei1482/bolgImage/萌萌哒男生头像.jpeg" />
 </a>
+<div class="author">
+    <span>明熙</span>
+</div>
+
+<div class="icon">
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/技术/">技术</a>
-  </div>
+        
+    
+        
+        <a title="github" href="https://github.com/ZhuWei1482" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-github"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+        <a title="email" href="mailto:15111651482@qq.com" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-email"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="qq" href="http://wpa.qq.com/msgrd?v=3&uin=15111651482&site=qq&menu=yes" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-qq"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="kugou" href="https://www.kugou.com/" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-kugou"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+    
+</div>
+
+
+
+
+<ul>
+    <li><div class="all active">全部文章<small>(9)</small></div></li>
+    
+        
+            
+            <li><div data-rel="技术">技术<small>(5)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="随记">随记<small>(3)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="美文">美文<small>(1)</small></div>
+                
+            </li>
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+    
+    
+    
+    
+    </div>
+    <div><a class="about  hasFriend  site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="9">
+<input type="hidden" id="yelog_site_word_count" value="1.9k">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="back-title-list"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <form onkeydown="if(event.keyCode==13){return false;}">
+        <input class="search" type="text" placeholder="Search..." autocomplete="off"id="local-search-input" >
+        <i class="cross"></i>
+        <span>
+            <label for="tagswitch">Tags:</label>
+            <input id="tagswitch" type="checkbox" style="display: none" />
+            <i id="tagsWitchIcon"></i>
+        </span>
+    </form>
+    <div class="tags-list">
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">docker</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">linux</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">网站</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">牢骚</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">短句</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">欲望</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">jsDelivr</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">cdn</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">销售</a>
+    </li>
+    
+    <div class="clearfix"></div>
+</div>
 
     
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li></ul>
-
-  </div>
-  
-    <span id="busuanzi_container_page_pv">
-      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
-    </span>
-  
-
-  <div class="article-inner">
+    <nav id="title-list-nav">
+        
+        <a  class="技术 "
+           href="/2019/10/12/通过jsDelivr引用资源/"
+           data-tag="jsDelivr,cdn"
+           data-author="" >
+            <span class="post-title" title="通过jsDelivr引用资源">通过jsDelivr引用资源</span>
+            <span class="post-date" title="2019-10-12 09:25:55">2019/10/12</span>
+        </a>
+        
+        <a  class="随记 "
+           href="/2019/10/11/牢骚/"
+           data-tag="牢骚"
+           data-author="" >
+            <span class="post-title" title="牢骚">牢骚</span>
+            <span class="post-date" title="2019-10-11 20:05:42">2019/10/11</span>
+        </a>
+        
+        <a  class="随记 "
+           href="/2019/09/10/论欲望/"
+           data-tag="欲望"
+           data-author="" >
+            <span class="post-title" title="论欲望">论欲望</span>
+            <span class="post-date" title="2019-09-10 17:08:33">2019/09/10</span>
+        </a>
+        
+        <a  class="技术 "
+           href="/2019/08/21/docker笔记/"
+           data-tag="docker"
+           data-author="" >
+            <span class="post-title" title="docker笔记">docker笔记</span>
+            <span class="post-date" title="2019-08-21 15:38:36">2019/08/21</span>
+        </a>
+        
+        <a  class="技术 "
+           href="/2019/08/18/实用网站记录/"
+           data-tag="网站"
+           data-author="" >
+            <span class="post-title" title="实用网站记录">实用网站记录</span>
+            <span class="post-date" title="2019-08-18 14:50:35">2019/08/18</span>
+        </a>
+        
+        <a  class="美文 "
+           href="/2019/08/16/文字之美/"
+           data-tag="短句"
+           data-author="" >
+            <span class="post-title" title="文字之美">文字之美</span>
+            <span class="post-date" title="2019-08-16 11:35:54">2019/08/16</span>
+        </a>
+        
+        <a  class="随记 "
+           href="/2019/08/15/销售经验随记/"
+           data-tag="销售"
+           data-author="" >
+            <span class="post-title" title="销售经验总结">销售经验总结</span>
+            <span class="post-date" title="2019-08-15 20:10:48">2019/08/15</span>
+        </a>
+        
+        <a  class="技术 "
+           href="/2019/08/13/linux常见命令/"
+           data-tag="linux"
+           data-author="" >
+            <span class="post-title" title="linux常见命令">linux常见命令</span>
+            <span class="post-date" title="2019-08-13 16:05:01">2019/08/13</span>
+        </a>
+        
+        <a  class="技术 "
+           href="/2019/07/30/linux系统java环境变量配置/"
+           data-tag="linux"
+           data-author="" >
+            <span class="post-title" title="java环境配置">java环境配置</span>
+            <span class="post-date" title="2019-07-30 16:46:19">2019/07/30</span>
+        </a>
+        
+    </nav>
+</div>
+    </div>
+    <div class="hide-list">
+        <div class="semicircle">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div class="post">
+    <div class="pjax">
+        <article id="post-linux系统java环境变量配置" class="article article-type-post" itemscope itemprop="blogPost">
     
-    <div class="article-content article-content-cloud" itemprop="articleBody">
+        <h1 class="article-title">java环境配置</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            
+                <a href="javascript:" data-rel="技术">技术</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="javascript:" class="color1">linux</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title='更新时间: 2019-10-11 20:07:46'>2019-07-30 16:46</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>字数:195</span>
+        
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
       
         <ol>
 <li>修改environment文件<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vim ./etc/environment</span><br></pre></td></tr></table></figure></div>
@@ -122,181 +406,300 @@
 </ol>
 
       
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 1511651482@qq.com </span>
     </div>
-    
-      <footer class="article-footer">
-        完
-      </footer>
-    
-  </div>
-  
-    
-<nav id="article-nav">
-  <div class="article-nav-block">
-    
-      <a href="/2019/08/13/linux常见命令/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption"></strong>
-        <div class="article-nav-title">
-          
-            linux常见命令
-          
-        </div>
-      </a>
-    
-  </div>
-  <div class="article-nav-block">
-    
-  </div>
-</nav>
-
-    
-<div id="gitmentContainer"></div>
-<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
-<script>
-var gitment = new Gitment({
-  owner: '',
-  repo: '',
-  oauth: {
-    client_id: '',
-    client_secret: '',
-  },
-})
-gitment.render('gitmentContainer')
-</script>
-
-  
-  
 </article>
-</section>
-        <aside id="sidebar">
-  
-    <div class="widget-box">
-  <div class="avatar-box">
-    <img class="avatar" src="/images/default-avatar.webp" title="图片来自网络"></img>
-    <h3 class="avatar-name">
-      
-        肖和
-      
-    </h3>
-    <p class="avatar-slogan">
-      一个整天瞎捣鼓，无所事事的无业游民。
+
+
+<p>
+    <a href="javascript:void(0)" class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>java环境配置</p>
+    <p><span class="copy-title">文章字数:</span><span class="post-count">195</span></p>
+    <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="明熙">明熙</a></p>
+    <p><span class="copy-title">发布时间:</span>2019-07-30, 16:46:19</p>
+    <p><span class="copy-title">最后更新:</span>2019-10-11, 20:07:46</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/07/30/linux系统java环境变量配置/" title="java环境配置">https://liuxueyang.xyz/2019/07/30/linux系统java环境变量配置/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
-  </div>
 </div>
 
 
-  
+
+
+
     
-  <div class="widget-box">
-    <h3 class="widget-title">Categories</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/">技术</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/美文/">美文</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/随记/">随记</a></li></ul>
+
+
+
+
     </div>
-  </div>
+    <div class="copyright">
+        <p class="footer-entry">©2019 MINGXI</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
 
-
-  
-    
-  <div class="widget-box">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/cdn/">cdn</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jsDelivr/">jsDelivr</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/欲望/">欲望</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/牢骚/">牢骚</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/短句/">短句</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/网站/">网站</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/销售/">销售</a></li></ul>
     </div>
-  </div>
+    <div class="full-toc">
+        <button class="full"><span class="min "></span></button>
+<button class="post-toc-menu"><span class="post-toc-menu-icons"></span></button>
+<div class="post-toc"><span class="post-toc-title">目录</span>
+    <div class="post-toc-content">
 
-
-  
-    
-  <div class="widget-box">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li></ul>
     </div>
-  </div>
-
-  
-    
-  <div class="widget-box">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2019/10/12/通过jsDelivr引用资源/">通过jsDelivr引用资源</a>
-          </li>
-        
-          <li>
-            <a href="/2019/10/11/牢骚/">牢骚</a>
-          </li>
-        
-          <li>
-            <a href="/2019/09/10/论欲望/">论欲望</a>
-          </li>
-        
-          <li>
-            <a href="/2019/08/21/docker笔记/">docker笔记</a>
-          </li>
-        
-          <li>
-            <a href="/2019/08/18/实用网站记录/">实用网站记录</a>
-          </li>
-        
-      </ul>
+</div>
+<a class="" id="rocket" href="javascript:void(0)"></a>
     </div>
-  </div>
+</div>
+<div class="acParent"></div>
 
-  
-      <div class="widget-box">
-    <h3 class="widget-title">友链</h3>
-    <div class="widget">
-      
-        <a style="display: block;" href="https://yiluyanxia.github.io/" title target='_blank'
-        >一路眼瞎</a>
-      
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>喜欢就点赞,疼爱就打赏</p>
     </div>
-  </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">支付宝</label></span><span><label><input type="radio" name="pay" value="weixin">微信</label></span>
+    </div>
+</div>
 
-  
-</aside>
-      </div>
-      <footer id="footer">
-  <div class="foot-box global-width">
-    &copy; 2019 xiaohe &nbsp;&nbsp;
-    Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity">antiquity</a>
-    <br>
-    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
-  </div>
-</footer>
-      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.0.1" ></script>
+
+<script src="/js/script.js?v=1.0.1" ></script>
 <script>
-if (!window.jQuery) {
-var script = document.createElement('script');
-script.src = "/js/jquery-2.0.3.min.js";
-document.body.write(script);
-}
+    var img_resize = 'default';
+    /*作者、标签的自动补全*/
+    $(function () {
+        $('.search').AutoComplete({
+            'data': ['#docker','#linux','#网站','#牢骚','#短句','#欲望','#jsDelivr','#cdn','#销售',],
+            'itemHeight': 20,
+            'width': 418
+        }).AutoComplete('show');
+    })
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $(".post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+        $('pre code').each(function(){
+            var lines = $(this).text().split('\n').length - 1, widther='';
+            if (lines>99) {
+                widther = 'widther'
+            }
+            var $numbering = $('<ul/>').addClass('pre-numbering ' + widther).attr("unselectable","on");
+            $(this).addClass('has-numbering ' + widther)
+                    .parent()
+                    .append($numbering);
+            for(var i=1;i<=lines;i++){
+                $numbering.append($('<li/>').text(i));
+            }
+        });
+        
+
+        /*访问数量*/
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
 </script>
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+<!--加入行号的高亮代码块样式-->
+
+<style>
+    pre{
+        position: relative;
+        margin-bottom: 24px;
+        border-radius: 10px;
+        border: 1px solid #e2dede;
+        background: #FFF;
+        overflow: hidden;
+    }
+    code.has-numbering{
+        margin-left: 30px;
+    }
+    code.has-numbering.widther{
+        margin-left: 35px;
+    }
+    .pre-numbering{
+        margin: 0px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        padding: 0.5em 3px 0.7em 5px;
+        border-right: 1px solid #C3CCD0;
+        text-align: right;
+        color: #AAA;
+        background-color: ;
+    }
+    .pre-numbering.widther {
+        width: 35px;
+    }
+</style>
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+        .nav .hide-list.fullscreen {
+            left: 492px
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+    .post .pjax article .article-entry>ol, .post .pjax article .article-entry>ul, .post .pjax article>ol, .post .pjax article>ul{
+        border: #e2dede solid 1px;
+        border-radius: 10px;
+        padding: 10px 32px 10px 56px;
+    }
+    .post .pjax article .article-entry li>ol, .post .pjax article .article-entry li>ul,.post .pjax article li>ol, .post .pjax article li>ul{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .post .pjax article .article-entry>ol>li, .post .pjax article .article-entry>ul>li,.post .pjax article>ol>li, .post .pjax article>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    .post .pjax article .article-entry li>ol>li, .post .pjax article .article-entry li>ul>li,.post .pjax article li>ol>li, .post .pjax article li>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    
+
+    /* 背景图样式 */
+    
+    
 
 
-<script src="/js/script.js"></script>
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+        background: url("https://i.loli.net/2019/07/22/5d3521411f3f169375.png");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+
+    
+</style>
 
 
 
-    </div>
-    <nav id="mobile-nav" class="mobile-nav-box">
-  <div class="mobile-nav-img mobile-nav-top"></div>
-  
-    <a href="/" class="mobile-nav-link">首页</a>
-  
-    <a href="/archives" class="mobile-nav-link">归档</a>
-  
-  <div class="mobile-nav-img  mobile-nav-bottom"></div>
-</nav>    
-  </div>
-</body>
+
+
+
+
 </html>
