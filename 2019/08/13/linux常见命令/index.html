@@ -377,7 +377,7 @@
 <li><p>cat    显示文本文件内容</p>
 </li>
 <li><p>echo    生成一个带内容文件</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ echo abcd &gt; 1</span><br><span class="line">#追加内容</span><br><span class="line">$ txtecho 1234 &gt;&gt; 1.txt</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ echo abcd &gt; 1</span><br><span class="line">#追加内容</span><br><span class="line">$ txtecho 1234 &gt;&gt; 1.txt</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>mkdir    创建目录</p>
 </li>
@@ -416,24 +416,24 @@
 <li><p>关机 shutdown -h now<br>重启<br>reboot<br>shutdown -r now</p>
 </li>
 <li><p>列出所有的端口</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -ntlp #win查看端口netstat -ano</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -ntlp #win查看端口netstat -ano</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>比如查看80端口的使用的情况。</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lsof -i tcp:80</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lsof -i tcp:80</span><br></pre></td></tr></table></figure>
 
 </li>
 </ol>
 <p>##Centos 7 firewall 命令：</p>
 <ol start="24">
-<li>查看已经开放的端口：<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --list-ports</span><br></pre></td></tr></table></figure></div>
+<li>查看已经开放的端口：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --list-ports</span><br></pre></td></tr></table></figure>
 
 </li>
 </ol>
 <p>开启端口</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --zone=public --add-port=20695/tcp --permanent</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --zone=public --add-port=20695/tcp --permanent</span><br></pre></td></tr></table></figure>
 
 <p>关闭端口</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --remove-port=45624/udp --permanent</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --remove-port=45624/udp --permanent</span><br></pre></td></tr></table></figure>
 
 <p>命令含义：<br>–zone #作用域<br>–add-port=80/tcp #添加端口，格式为：端口/通讯协议<br>–permanent #永久生效，没有此参数重启后失效</p>
 <p>重启防火墙:<br>firewall-cmd –reload #重启firewall<br>systemctl stop firewalld #停止firewall<br>systemctl start firewalld #启动firewall<br>systemctl disable firewalld #禁止firewall开机启动<br>systemctl enable firewalld #启动firewall开机启动<br>firewall-cmd –state #查看默认防火墙状态（关闭后显示notrunning，开启后显示running）</p>
