@@ -371,12 +371,12 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-10-11 14:16:01'>2019-08-13 16:05</time>
+        创建时间:<time class="date" title='更新时间: 2019-10-15 19:48:47'>2019-08-13 16:05</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:649</span>
+        <span>字数:648</span>
         
         
         
@@ -401,25 +401,17 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="文件命令"><a href="#文件命令" class="headerlink" title="文件命令:"></a>文件命令:</h2><ol>
-<li><p>cat    显示文本文件内容</p>
-</li>
-<li><p>echo    生成一个带内容文件</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ echo abcd &gt; 1</span><br><span class="line">#追加内容</span><br><span class="line">$ txtecho 1234 &gt;&gt; 1.txt</span><br></pre></td></tr></table></figure></div>
-</li>
-<li><p>mkdir    创建目录</p>
-</li>
-<li><p>rm    删除文件<br> -f    强制删除文件或目录<br> -r    同时删除该目录下的所有文件</p>
-</li>
-<li><p>mv    移动文件或目录</p>
-</li>
-<li><p>find    在文件系统中查找指定的文件<br> -name    文件名</p>
-</li>
-<li><p>ln    建立软链接</p>
-</li>
-<li><p>tail    显示文件结尾内容<br> -f    跟踪输出</p>
-</li>
-<li><p>grep搜索字符串</p>
-</li>
+<li>cat    显示文本文件内容</li>
+<li>echo    生成一个带内容文件<pre><code> $ echo abcd &gt; 1
+ #追加内容
+ $ txtecho 1234 &gt;&gt; 1.txt </code></pre></li>
+<li>mkdir    创建目录</li>
+<li>rm    删除文件<br> -f    强制删除文件或目录<br> -r    同时删除该目录下的所有文件</li>
+<li>mv    移动文件或目录</li>
+<li>find    在文件系统中查找指定的文件<br> -name    文件名</li>
+<li>ln    建立软链接</li>
+<li>tail    显示文件结尾内容<br> -f    跟踪输出</li>
+<li>grep搜索字符串</li>
 </ol>
 <h2 id="压缩命令"><a href="#压缩命令" class="headerlink" title="压缩命令"></a>压缩命令</h2><ol start="10">
 <li>tar    tar [-cxzjvf] 压缩打包文档的名称 欲打包目录<br>-c    建立一个归档文件的参数指令<br>-x    解开一个归档文件的参数指令<br>-z    是否需要用 gzip 压缩（常用）<br>-j    是否需要用 bzip2 压缩<br>-v    压缩的过程中显示文件<br>-f    使用档名，在 f 之后要立即接档名<br>-tf    查看归档文件里面的文件</li>
@@ -443,26 +435,16 @@
 <li><p>关机 shutdown -h now<br>重启<br>reboot<br>shutdown -r now</p>
 </li>
 <li><p>列出所有的端口</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -ntlp #win查看端口netstat -ano</span><br></pre></td></tr></table></figure></div>
-</li>
+<pre><code>netstat -ntlp #win查看端口netstat -ano</code></pre></li>
 <li><p>比如查看80端口的使用的情况。</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lsof -i tcp:80</span><br></pre></td></tr></table></figure></div>
-
+<pre><code>lsof -i tcp:80</code></pre><p>##Centos 7 firewall 命令：</p>
+</li>
+<li><p>查看已经开放的端口：</p>
+<pre><code>firewall-cmd --list-ports</code></pre><p>开启端口</p>
+<pre><code>firewall-cmd --zone=public --add-port=20695/tcp --permanent</code></pre><p>关闭端口</p>
+<pre><code>firewall-cmd --remove-port=45624/udp --permanent</code></pre><p>命令含义：<br>–zone #作用域<br>–add-port=80/tcp #添加端口，格式为：端口/通讯协议<br>–permanent #永久生效，没有此参数重启后失效</p>
 </li>
 </ol>
-<p>##Centos 7 firewall 命令：</p>
-<ol start="24">
-<li>查看已经开放的端口：<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --list-ports</span><br></pre></td></tr></table></figure></div>
-
-</li>
-</ol>
-<p>开启端口</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --zone=public --add-port=20695/tcp --permanent</span><br></pre></td></tr></table></figure></div>
-
-<p>关闭端口</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --remove-port=45624/udp --permanent</span><br></pre></td></tr></table></figure></div>
-
-<p>命令含义：<br>–zone #作用域<br>–add-port=80/tcp #添加端口，格式为：端口/通讯协议<br>–permanent #永久生效，没有此参数重启后失效</p>
 <p>重启防火墙:<br>firewall-cmd –reload #重启firewall<br>systemctl stop firewalld #停止firewall<br>systemctl start firewalld #启动firewall<br>systemctl disable firewalld #禁止firewall开机启动<br>systemctl enable firewalld #启动firewall开机启动<br>firewall-cmd –state #查看默认防火墙状态（关闭后显示notrunning，开启后显示running）</p>
 
       
@@ -478,10 +460,10 @@
 
 <div class="article_copyright">
     <p><span class="copy-title">文章标题:</span>linux常见命令</p>
-    <p><span class="copy-title">文章字数:</span><span class="post-count">649</span></p>
+    <p><span class="copy-title">文章字数:</span><span class="post-count">648</span></p>
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="明熙">明熙</a></p>
     <p><span class="copy-title">发布时间:</span>2019-08-13, 16:05:01</p>
-    <p><span class="copy-title">最后更新:</span>2019-10-11, 14:16:01</p>
+    <p><span class="copy-title">最后更新:</span>2019-10-15, 19:48:47</p>
     <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/08/13/linux常见命令/" title="linux常见命令">https://liuxueyang.xyz/2019/08/13/linux常见命令/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。

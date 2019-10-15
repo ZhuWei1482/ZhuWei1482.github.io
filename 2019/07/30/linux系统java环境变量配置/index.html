@@ -371,12 +371,12 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-10-11 20:07:46'>2019-07-30 16:46</time>
+        创建时间:<time class="date" title='更新时间: 2019-10-15 19:50:33'>2019-07-30 16:46</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:195</span>
+        <span>字数:193</span>
         
         
         
@@ -401,23 +401,48 @@
     <div class="article-entry" itemprop="articleBody">
       
         <ol>
-<li>修改environment文件<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vim ./etc/environment</span><br></pre></td></tr></table></figure></div>
-
-</li>
+<li>修改environment文件<pre><code>$ vim ./etc/environment</code></pre><pre><code>PATH=&quot;/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games&quot;
+ export JAVA_HOME=/usr/local/java/jdk1.8.0_152
+ export JRE_HOME=/usr/local/java/jdk1.8.0_152/jre
+ export CLASSPATH=$CLASSPATH:$JAVA_HOME/lib:$JAVA_HOME/jre/lib</code></pre></li>
 </ol>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">PATH=&quot;/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games&quot;</span><br><span class="line">	export JAVA_HOME=/usr/local/java/jdk1.8.0_152</span><br><span class="line">	export JRE_HOME=/usr/local/java/jdk1.8.0_152/jre</span><br><span class="line">	export CLASSPATH=$CLASSPATH:$JAVA_HOME/lib:$JAVA_HOME/jre/lib</span><br></pre></td></tr></table></figure></div>
-
 <hr>
 <ol start="2">
-<li>修改profile文件<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vim ./etc/profile</span><br></pre></td></tr></table></figure></div>
+<li><p>修改profile文件</p>
+<pre><code class="bash">$ vim ./etc/profile</code></pre>
+<pre><code>if [ &quot;$PS1&quot; ]; then
+if [ &quot;$BASH&quot; ] &amp;&amp; [ &quot;$BASH&quot; != &quot;/bin/sh&quot; ]; then
+ # The file bash.bashrc already sets the default PS1.
+ # PS1=&#39;\h:\w\$ &#39;
+ if [ -f /etc/bash.bashrc ]; then
+   . /etc/bash.bashrc
+ fi
+else
+ if [ &quot;`id -u`&quot; -eq 0 ]; then
+   PS1=&#39;# &#39;
+ else
+   PS1=&#39;$ &#39;
+ fi
+   fi
+ fi
 
-</li>
+ export JAVA_HOME=/usr/local/java/jdk1.8.0_152
+ export JRE_HOME=/usr/local/java/jdk1.8.0_152/jre
+ export CLASSPATH=$CLASSPATH:$JAVA_HOME/lib:$JAVA_HOME/jre/lib
+ export PATH=$JAVA_HOME/bin:$JAVA_HOME/jre/bin:$PATH:$HOME/bin
+
+ if [ -d /etc/profile.d ]; then
+   for i in /etc/profile.d/*.sh; do
+         if [ -r $i ]; then
+       . $i
+     fi
+   done
+   unset i
+ fi</code></pre></li>
 </ol>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">if [ &quot;$PS1&quot; ]; then</span><br><span class="line">  if [ &quot;$BASH&quot; ] &amp;&amp; [ &quot;$BASH&quot; != &quot;/bin/sh&quot; ]; then</span><br><span class="line">    # The file bash.bashrc already sets the default PS1.</span><br><span class="line">    # PS1=&apos;\h:\w\$ &apos;</span><br><span class="line">    if [ -f /etc/bash.bashrc ]; then</span><br><span class="line">      . /etc/bash.bashrc</span><br><span class="line">    fi</span><br><span class="line">  else</span><br><span class="line">    if [ &quot;`id -u`&quot; -eq 0 ]; then</span><br><span class="line">      PS1=&apos;# &apos;</span><br><span class="line">    else</span><br><span class="line">      PS1=&apos;$ &apos;</span><br><span class="line">    fi</span><br><span class="line">  	fi</span><br><span class="line">	fi</span><br><span class="line"></span><br><span class="line">	export JAVA_HOME=/usr/local/java/jdk1.8.0_152</span><br><span class="line">	export JRE_HOME=/usr/local/java/jdk1.8.0_152/jre</span><br><span class="line">	export CLASSPATH=$CLASSPATH:$JAVA_HOME/lib:$JAVA_HOME/jre/lib</span><br><span class="line">	export PATH=$JAVA_HOME/bin:$JAVA_HOME/jre/bin:$PATH:$HOME/bin</span><br><span class="line"></span><br><span class="line">	if [ -d /etc/profile.d ]; then</span><br><span class="line">	  for i in /etc/profile.d/*.sh; do</span><br><span class="line"> 	 	  if [ -r $i ]; then</span><br><span class="line">  	    . $i</span><br><span class="line">  	  fi</span><br><span class="line">  	done</span><br><span class="line"> 	 unset i</span><br><span class="line">	fi</span><br></pre></td></tr></table></figure></div>
-
 <hr>
 <ol start="3">
-<li>使用户环境变量生效<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ .source /etc/profile</span><br></pre></td></tr></table></figure></div></li>
+<li>使用户环境变量生效<pre><code>$ .source /etc/profile</code></pre></li>
 </ol>
 
       
@@ -433,10 +458,10 @@
 
 <div class="article_copyright">
     <p><span class="copy-title">文章标题:</span>java环境配置</p>
-    <p><span class="copy-title">文章字数:</span><span class="post-count">195</span></p>
+    <p><span class="copy-title">文章字数:</span><span class="post-count">193</span></p>
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="明熙">明熙</a></p>
     <p><span class="copy-title">发布时间:</span>2019-07-30, 16:46:19</p>
-    <p><span class="copy-title">最后更新:</span>2019-10-11, 20:07:46</p>
+    <p><span class="copy-title">最后更新:</span>2019-10-15, 19:50:33</p>
     <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/07/30/linux系统java环境变量配置/" title="java环境配置">https://liuxueyang.xyz/2019/07/30/linux系统java环境变量配置/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
