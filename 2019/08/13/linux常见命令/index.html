@@ -268,7 +268,7 @@
         </a>
         
         <a  class="技术 "
-           href="/2019/10/13/hexo的坑/"
+           href="/2019/10/13/各种坑/"
            data-tag="hexo"
            data-author="" >
             <span class="post-title" title="各种坑">各种坑</span>
@@ -308,7 +308,7 @@
         </a>
         
         <a  class="技术 "
-           href="/2019/08/18/实用网站记录/"
+           href="/2019/08/18/实用网站（工具）记录/"
            data-tag="网站"
            data-author="" >
             <span class="post-title" title="实用网站（工具）记录">实用网站（工具）记录</span>
@@ -553,6 +553,17 @@
         document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
     } 
 setInterval("createtime()",250);
+
+/*百度统计*/
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?e480414e4fc816a67c74f8e07b31698a";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+
+
 </script>
 <p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
 
